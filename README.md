@@ -13,6 +13,8 @@ Development of GICI's Smartphone-based Quadrotor - Master's thesis development.
 Available: http://ieeexplore.ieee.org/document/7991400/
 - A. Astudillo, B. Bacca and E. Rosero, “Optimal and robust controllers design for a smartphone-based quadrotor,” in 2017 IEEE 3rd Colombian Conference on Automatic Control (CCAC). IEEE, oct 2017, pp. 1-6. [Online].
 Available: http://ieeexplore.ieee.org/document/8276392/
+- L. Garcia, A. Astudillo, and E. Rosero, “Fast model predictive control on a smartphone-based flight controller,” in 2019 IEEE 4rd Colombian Conference on Automatic Control (CCAC). IEEE, oct 2019, pp. 1-6. [Online].
+Available: http://ieeexplore.ieee.org/document/8920998/
 
 ## Videos
 * Flight test using an <img src="https://latex.codecogs.com/gif.latex?$H_\infty$" title="$H_\infty$" /></a> controller
