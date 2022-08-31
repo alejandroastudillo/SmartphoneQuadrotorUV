@@ -17,9 +17,9 @@ Available: http://ieeexplore.ieee.org/document/8276392/
 Available: http://ieeexplore.ieee.org/document/8920998/
 
 ## Videos
-* Flight test using an <img src="https://latex.codecogs.com/gif.latex?$H_\infty$" title="$H_\infty$" /></a> controller
+* Flight test using an H-infinity controller
 
-[![Flight Test Video](https://img.youtube.com/vi/j2ythmjcvrs/0.jpg)](https://www.youtube.com/watch?v=j2ythmjcvrs "Flight Test Video")
+[![Flight Test Video](https://img.youtube.com/vi/zkhahwjsqcQ/0.jpg)](https://youtu.be/zkhahwjsqcQ "Flight Test Video")
 
 ## Links:
 * Industrial Control Research Group (GICI): http://gici.univalle.edu.co/
