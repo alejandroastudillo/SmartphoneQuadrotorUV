@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.survey360.quadcoptercontroluv.TestActivities.MotorsTestActivity">
+
+    <FrameLayout
+        android:layout_width="395dp"
+        android:layout_height="667dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_TextSmartBat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_TextBPerc"
+                android:layout_below="@+id/pb_BatPercent"
+                android:layout_marginTop="22dp"
+                android:text="Smartphone Battery:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_TextBPerc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tb_TCPserver"
+                android:layout_alignStart="@+id/tv_TextBVolt"
+                android:layout_marginBottom="99dp"
+                android:text="Battery Percentage:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_BatVolt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_TextBVolt"
+                android:layout_alignBottom="@+id/tv_TextBVolt"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/tb_TCPserver"
+                android:text="11.9 V"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_smartbatt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_TextSmartBat"
+                android:layout_alignBottom="@+id/tv_TextSmartBat"
+                android:layout_alignStart="@+id/pb_BatPercent"
+                android:text="51 %"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_quadbatt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_TextBPerc"
+                android:layout_alignBottom="@+id/tv_TextBPerc"
+                android:layout_alignStart="@+id/tv_BatVolt"
+                android:text="87 %"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_TextBVolt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_TextBPerc"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginStart="23dp"
+                android:text="Battery Voltage:"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/tb_TCPserver"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/sb_Motor4"
+                android:layout_marginBottom="56dp"
+                android:layout_marginStart="41dp"
+                android:checked="false"
+                android:text="Arm/Disarm"
+                android:textOff="Disarmed"
+                android:textOn="Armed" />
+
+            <ProgressBar
+                android:id="@+id/pb_BatPercent"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_quadbatt"
+                android:layout_below="@+id/tv_quadbatt"
+                android:layout_marginTop="8dp"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/tv_Motor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_TextBVolt"
+                android:layout_alignTop="@+id/sb_Motor1"
+                android:text="Motor 1: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_Motor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_TextBVolt"
+                android:layout_alignTop="@+id/sb_Motor2"
+                android:text="Motor 2: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_Motor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_TextBVolt"
+                android:layout_alignTop="@+id/sb_Motor3"
+                android:text="Motor 3: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_Motor4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_TextBVolt"
+                android:layout_alignTop="@+id/sb_Motor4"
+                android:text="Motor 4: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/sb_Motor1"
+                android:layout_width="230dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="64dp"
+                android:layout_toEndOf="@+id/tv_Motor1" />
+
+            <SeekBar
+                android:id="@+id/sb_Motor2"
+                android:layout_width="230dp"
+                android:layout_height="25dp"
+                android:layout_alignStart="@+id/sb_Motor1"
+                android:layout_below="@+id/sb_Motor1"
+                android:layout_marginTop="38dp" />
+
+            <SeekBar
+                android:id="@+id/sb_Motor3"
+                android:layout_width="230dp"
+                android:layout_height="25dp"
+                android:layout_alignStart="@+id/sb_Motor2"
+                android:layout_below="@+id/sb_Motor2"
+                android:layout_marginTop="41dp" />
+
+            <SeekBar
+                android:id="@+id/sb_Motor4"
+                android:layout_width="230dp"
+                android:layout_height="25dp"
+                android:layout_alignStart="@+id/sb_Motor3"
+                android:layout_below="@+id/sb_Motor3"
+                android:layout_marginTop="41dp" />
+
+            <TextView
+                android:id="@+id/tv_m1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_Motor1"
+                android:layout_alignBottom="@+id/tv_Motor1"
+                android:layout_toEndOf="@+id/sb_Motor1"
+                android:text="0 %"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_m2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_Motor2"
+                android:layout_alignBottom="@+id/tv_Motor2"
+                android:layout_toEndOf="@+id/sb_Motor2"
+                android:text="0 %"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_m3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 %"
+                android:textSize="16sp"
+                android:layout_alignBaseline="@+id/tv_Motor3"
+                android:layout_alignBottom="@+id/tv_Motor3"
+                android:layout_toEndOf="@+id/sb_Motor3" />
+
+            <TextView
+                android:id="@+id/tv_m4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_Motor4"
+                android:layout_alignBottom="@+id/tv_Motor4"
+                android:layout_toEndOf="@+id/sb_Motor4"
+                android:text="0 %"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

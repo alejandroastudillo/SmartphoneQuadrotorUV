@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.survey360.quadcoptercontroluv.TestActivities.PositionKFTest">
+
+    <FrameLayout
+        android:layout_width="395dp"
+        android:layout_height="667dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_Arm"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="25dp"
+                android:text="Start"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/bt_stopPKF"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_alignBottom="@+id/bt_Arm"
+                android:layout_marginStart="65dp"
+                android:layout_toEndOf="@+id/bt_Arm"
+                android:text="Stop"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_TextBPerc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/bt_Arm"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="18dp"
+                android:text="Raw Data"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_TextBPerc"
+                android:layout_below="@+id/tv_TextBPerc"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/Labels_LO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Lat_LB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="Latitude [°]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Lon_LB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="Longitude [°]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Alt_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="Altitude [m]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Roll_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="Roll [°]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Pitch_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="Pitch [°]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Yaw_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="Yaw [°]:"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Sensor_Data_LO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Title_TV"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.41"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/GPS_Latitude_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/Title_TV"
+                        android:layout_below="@+id/Title_TV"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS_Latitude"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/GPS_Longitude_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/GPS_Latitude_TVp"
+                        android:layout_alignTop="@+id/GPS_Latitude_TVp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS_Longitude"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Altitude_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Altitude"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Roll_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Roll"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Pitch_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Pitch"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Yaw_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Yaw"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Labels2_LOpkf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/GPSAccuracy_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS Accuracy:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/GPSBearing_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS Bearing:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/GPSSpeed_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS Speed:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS Time:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Baro. Altitude [m]:"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Sensor_Data2_LOpkf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/GPS_Accuracy_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS_Accuracy"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/GPS_Bearing_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS_Bearing"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/GPS_Speed_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS_Speed"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/GPS_Time_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="GPS_Time"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Baro_Alt_TVp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Baro_Alt"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/linearLayout2"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_marginTop="28dp"
+                android:text="Processed Data"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView4"
+                android:layout_below="@+id/textView4"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/Labels3_LOpkf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/East_LB"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="X [m]: "
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/North_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Y [m]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/MSNM_LB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="Z [m]:"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Sensor_Data3_LOpkf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Title_TV"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.56"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/X_TV"
+                        android:layout_width="91dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/Title_TV"
+                        android:layout_below="@+id/Title_TV"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="East"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Y_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/GPS_Latitude_TVp"
+                        android:layout_alignTop="@+id/GPS_Latitude_TVp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="North"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Z_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Altitude"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Labels4_LOpkf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Roll_LB2"
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Roll [°]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Pitch_LB2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Pitch [°]:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Yaw_LB2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yaw [°]:"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Sensor_Data4_LOpkf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/Roll_TV2"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Roll"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Pitch_TV2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Pitch"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/Yaw_TV2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Yaw"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

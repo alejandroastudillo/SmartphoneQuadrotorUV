@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cloudpaper"
+    tools:context="com.survey360.quadcoptercontroluv.MenuActivities.MainActivity">
+
+    <FrameLayout
+        android:layout_width="395dp"
+        android:layout_height="667dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="395dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="8dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:layout_marginBottom="11dp"
+                app:srcCompat="@drawable/quadcopterlogo3"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="-227dp"
+                android:layout_above="@+id/lb_Title"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bt_Info"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="160dp"
+                android:layout_height="85dp"
+                android:text="Info"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="501dp"
+                tools:textStyle="italic"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginBottom="38dp" />
+
+            <Button
+                android:id="@+id/bt_Settings"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="160dp"
+                android:layout_height="85dp"
+                android:layout_alignStart="@+id/bt_Tests"
+                android:layout_alignTop="@+id/bt_Info"
+                android:text="Settings"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="501dp"
+                tools:textStyle="italic" />
+
+            <Button
+                android:id="@+id/bt_Tests"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="160dp"
+                android:layout_height="85dp"
+                android:text="Tests"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="400dp"
+                tools:textStyle="italic"
+                android:layout_above="@+id/bt_Settings"
+                android:layout_alignEnd="@+id/imageView3"
+                android:layout_marginBottom="22dp" />
+
+            <Button
+                android:id="@+id/BT_Mission"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="160dp"
+                android:layout_height="85dp"
+                android:layout_alignBottom="@+id/bt_Tests"
+                android:layout_alignStart="@+id/bt_Info"
+                android:text="Mission"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="300dp"
+                tools:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/lb_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="30sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.526"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.419"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

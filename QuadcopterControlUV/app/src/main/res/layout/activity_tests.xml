@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cloudpaper"
+    tools:context="com.survey360.quadcoptercontroluv.MenuActivities.TestsActivity">
+
+    <FrameLayout
+        android:layout_width="395dp"
+        android:layout_height="667dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_MotorsTest"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="65dp"
+                android:text="Motors Test"
+                android:textSize="22dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bt_CommTest"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_alignStart="@+id/bt_KalmanPosTest"
+                android:layout_below="@+id/bt_KalmanPosTest"
+                android:layout_marginTop="30dp"
+                android:text="Communication Test"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/bt_KalmanPosTest"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:text="Position Kalman Filter Test"
+                android:textSize="22dp"
+                android:layout_marginTop="36dp"
+                android:layout_below="@+id/bt_KalmanAttTest"
+                android:layout_alignStart="@+id/bt_KalmanAttTest" />
+
+            <Button
+                android:id="@+id/bt_KalmanAttTest"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:text="Attitude Kalman Filter Test"
+                android:textSize="22dp"
+                android:layout_marginTop="38dp"
+                android:layout_below="@+id/bt_MotorsTest"
+                android:layout_alignStart="@+id/bt_MotorsTest" />
+        </RelativeLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

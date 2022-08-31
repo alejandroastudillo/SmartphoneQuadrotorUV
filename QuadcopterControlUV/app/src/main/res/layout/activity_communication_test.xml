@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.survey360.quadcoptercontroluv.TestActivities.CommunicationTest">
+
+    <FrameLayout
+        android:layout_width="395dp"
+        android:layout_height="667dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ToggleButton
+                android:id="@+id/tb_HotspotON"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_marginTop="33dp"
+                android:text="ToggleButton"
+                android:textOff="Hotspot Off"
+                android:textOn="Hotspot On"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/bt_configureHotspot"
+                android:layout_width="100dp"
+                android:layout_height="65dp"
+                android:layout_below="@+id/et_password"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:autoText="true"
+                android:text="Configure Hotspot"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/et_password"
+                android:layout_alignBottom="@+id/et_password"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:text="Password"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tv_password"
+                android:layout_below="@+id/tb_HotspotON"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="40dp"
+                android:text="SSID"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/et_SSID"
+                android:layout_below="@+id/et_SSID"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="giciuv182" />
+
+            <EditText
+                android:id="@+id/et_SSID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="QuadrotorNet"
+                android:layout_alignBaseline="@+id/textView6"
+                android:layout_alignBottom="@+id/textView6"
+                android:layout_toEndOf="@+id/textView6"
+                android:layout_marginStart="12dp" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

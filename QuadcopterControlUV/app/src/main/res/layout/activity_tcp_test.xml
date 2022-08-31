@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.survey360.quadcoptercontroluv.TestActivities.TcpTest">
+
+    <FrameLayout
+        android:layout_width="395dp"
+        android:layout_height="667dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_BatVolt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_TextBVolt"
+                android:layout_alignTop="@+id/tv_TextBVolt"
+                android:layout_marginStart="11dp"
+                android:layout_toEndOf="@+id/tv_TextBPerc"
+                android:text="Message:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_TextBVolt"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tb_TCPserver"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="32dp"
+                android:text="message"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ToggleButton
+                android:id="@+id/tb_TCPserver"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:checked="false"
+                android:text="Arm/Disarm"
+                android:textOff="TCP Server Off"
+                android:textOn="TCP Server On"
+                android:layout_marginTop="19dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ProgressBar
+                android:id="@+id/pb_yAxis"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_below="@+id/pb_xAxis"
+                android:layout_alignStart="@+id/pb_xAxis" />
+
+            <ProgressBar
+                android:id="@+id/pb_zAxis"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/pb_yAxis"
+                android:layout_below="@+id/pb_yAxis"
+                android:layout_marginTop="13dp" />
+
+            <ProgressBar
+                android:id="@+id/pb_zRotation"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pb_zAxis"
+                android:layout_alignStart="@+id/pb_zAxis"
+                android:layout_marginTop="11dp" />
+
+            <ProgressBar
+                android:id="@+id/pb_xAxis"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_below="@+id/tv_BatVolt"
+                android:layout_alignStart="@+id/tv_TextBVolt" />
+
+            <TextView
+                android:id="@+id/tv_xAxis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X Axis"
+                android:layout_marginEnd="24dp"
+                android:layout_alignBottom="@+id/pb_xAxis"
+                android:layout_toStartOf="@+id/pb_xAxis" />
+
+            <TextView
+                android:id="@+id/tv_yAxis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_xAxis"
+                android:layout_alignTop="@+id/pb_yAxis"
+                android:text="Y Axis" />
+
+            <TextView
+                android:id="@+id/tv_zRotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_yAxis"
+                android:layout_alignTop="@+id/pb_zRotation"
+                android:text="Z Rot."
+                android:layout_alignEnd="@+id/tv_yAxis" />
+
+            <TextView
+                android:id="@+id/tv_dP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_zAxis"
+                android:layout_below="@+id/tv_zRotation"
+                android:layout_marginTop="13dp"
+                android:text="D-Pad" />
+
+            <TextView
+                android:id="@+id/tv_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_dP"
+                android:layout_below="@+id/tv_dP"
+                android:layout_marginTop="14dp"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/tv_buttonPressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_button"
+                android:layout_alignBottom="@+id/tv_button"
+                android:layout_alignStart="@+id/tv_dPad"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/tv_dPad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_dP"
+                android:layout_alignTop="@+id/tv_dP"
+                android:layout_toEndOf="@+id/tv_BatVolt"
+                android:text="D-Pad" />
+
+            <TextView
+                android:id="@+id/tv_zAxis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tv_xAxis"
+                android:layout_alignTop="@+id/pb_zAxis"
+                android:text="Z Axis" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>
