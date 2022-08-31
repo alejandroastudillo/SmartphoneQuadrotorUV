@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath missioncontrolleruv1.MissionControllerUV</exec.args>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-Generate jar</actionName>
+            <displayName>Generate jar</displayName>
+            <preAction>build-with-dependencies</preAction>
+            <goals>
+                <goal>source:jar</goal>
+            </goals>
+        </action>
+    </actions>
